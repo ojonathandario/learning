@@ -1,13 +1,16 @@
                   #### INPUT DOS DADOS ####
 
+
 # Variável de controle de quantidade de repetições e posições #
 i = 1
 
-# Definição da variável que armazenará os dados da estação #
+# Definição do vetor que armazenará os dados da estação #
 estacao = []
 
 # Repetição para alimentação das informações diárias da variável estacao #
-while i < 3:
+# Aqui é determinado a quantidade de dias (N + 1) #
+# Coloquei 4 para testar 3 vetores. Agora é só colocar 366 e brincar com valores do ano todo! #
+while i < 4:
 
     # Indicador do dia que receberá os dados #
     print("digite as informações do dia ", i)
@@ -26,8 +29,10 @@ while i < 3:
     i = i + 1
     # controle de quantas posições serão armazenadas na variável estacao #
 
-# print(estacao)
+# Imprimir o vetor estação para conferir #
+#print(estacao)
 
+  
   
                   #### CONTADOR DOS DIAS DE CHUVA ####
 
@@ -42,19 +47,22 @@ count = 0
 ncount = 0
 
 # Repetição para percorrer todas as posições do vetor estacao #
-while i < len(estacao):
+while i < len(estcao):
 
   # Verificação da condicional se choveu ou não #
-  if estacao [i[j]].value == s:
-  count = count + 1
+  if estacao [i][j] == 'S':
+    count = count + 1
   else:
-  ncount = ncount + 1
+    ncount = ncount + 1
   i = i + 1
   
 print ("Quantidade de dias de chuva: ", count)
 
 
+
+
                   #### CÁLCULO DAS MÉDIAS DE TEMPERATURAS ####
+
 
   # Variável que percorrerá as posições do vetor estacao #
 i = 0
@@ -69,10 +77,11 @@ soma = 0
 
 # Repetição que percorrerá todas as posições do vetor estacao #
           # A função 'len' foi usada pois assim o código funcionará para qualquer vetor #
-for i in len(estacao):
-  # estacao[i[M]] & estacao[i[m]] são as informações na posição do vetor dentro do vetor #
-  SOMA = SOMA + estacao[i[M]]
-  soma = soma + estacao[i[m]]
+while i < len(estacao):
+  # estacao[i[M]] & estacao[i[m]] são as informações na posição do vetor dentro do vetor 
+  # Coloquei int() só para os testes, mas o correto era float() #
+  SOMA = SOMA + int(estacao[i][M])
+  soma = soma + int(estacao[i][m])
   i = i + 1
 
 # Cálculo das médias #
@@ -86,3 +95,25 @@ print ("A média de temperaturas mínimas no período eh: ", media)
 
                   #### TEMPERATURAS EM ORDEM CRESCENTE ####
 
+
+# Criação da variável que comportará os valores das temperaturas #
+ordem = []
+
+# Variável que percorrerá todas as posições do vetor estacao #
+i = 0
+# As variáveis M e m indicarão as temperaturas máximas e mínimas dentro de cada posição do vetor estacao #
+
+# Função looping que percorrerá as posições em estação, que é determinada com seu comprimento #
+while i < len(estacao):
+
+  # Função que add a informação selecionada no final do novo vetor ordem #
+  # Coloquei int() só para os testes, mas o correto era float() #
+  ordem.append(int(estacao[i][M]))
+  ordem.append(int(estacao[i][m]))
+  i = i + 1
+
+# Função que coloca em ordem crescente as informações contidas no vetor ordem #
+#sorted()
+
+print("Lista com todas as temperaturas registradas em ordem crescente:")
+print(sorted(ordem))

@@ -13,10 +13,11 @@ soma = 0
 
 # Repetição que percorrerá todas as posições do vetor estacao #
           # A função 'len' foi usada pois assim o código funcionará para qualquer vetor #
-for i in len(estacao):
-  # estacao[i[M]] & estacao[i[m]] são as informações na posição do vetor dentro do vetor #
-  SOMA = SOMA + estacao[i[M]]
-  soma = soma + estacao[i[m]]
+while i < len(estacao):
+  # estacao[i[M]] & estacao[i[m]] são as informações na posição do vetor dentro do vetor 
+  # Coloquei int() só para os testes, mas o correto era float() #
+  SOMA = SOMA + int(estacao[i][M])
+  soma = soma + int(estacao[i][m])
   i = i + 1
 
 # Cálculo das médias #

@@ -11,13 +11,13 @@ count = 0
 ncount = 0
 
 # Repetição para percorrer todas as posições do vetor estacao #
-while i < len(estacao):
+while i < len(estcao):
 
   # Verificação da condicional se choveu ou não #
-  if estacao [i[j]].value == s:
-  count = count + 1
+  if estacao [i][j] == 'S':
+    count = count + 1
   else:
-  ncount = ncount + 1
+    ncount = ncount + 1
   i = i + 1
   
 print ("Quantidade de dias de chuva: ", count)
